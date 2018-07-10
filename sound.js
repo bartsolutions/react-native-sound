@@ -21,7 +21,7 @@ function setAndroidVolumes(sound) {
   // calculates the volumes for left and right channels
   if (sound._pan) {
     const relativeVolume = calculateRelativeVolume(sound._volume, sound._pan);
-    if (sound._pan < 0) {
+    if (sound._pan > 0) {
       // left is louder
       RNSound.setVolume(sound._key, sound._volume, relativeVolume);
     } else {
